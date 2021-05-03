@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> Events and Eventlisteners demo</title>
+          <h1> Event and Eventlistener Demo</h1>
+    </head>
+    <body id ="main">
+
+        <button id="button1" onclick="paraChange()">Click me</button><br>
+        <p id=para1> this is paragraph</p>
+        <input type="text" id ="textfield1" onchange="textEntered()">
+        <p id=para2> this is paragraph</p>
+        <button id="button2"> Click me</button><br>
+        <p id=para3> this is paragraph</p><br>
+        <input type="text"  id ="textfield2">
+        <p id=para4> this is paragraph</p><br>
+<script>
+   
+   function paraChange()
+   {
+       document.getElementById("para1").innerHTML="Button1 is clicked";
+       alert("button is clicked");
+   }
+   function textEntered(){
+       let textValue=document.getElementById("textfield1").value;
+       //console.log(textValue)
+       let textLength=textValue.length
+       document.getElementById("para2").innerHTML="characters typed "+textLength;
+   }
+    document.getElementById("button2").addEventListener("click",paraDelete)
+
+    function paraDelete()
+    {
+        console.log("button2 is pressed");
+        let para= document.getElementById("para3");
+        document.getElementById("main").removeChild(para);
+    }
+   document.getElementById("textfield2").addEventListener("change",changeFont)
+   function changeFont(){
+       let fontsize=document.getElementById("textfield2").value;
+       fontsize=fontsize+"px"
+       console.log(fontsize);
+       document.getElementById("para4").style.changeFont=fontsize;
+
+   }
+
+
+</script>
+        
+    </body>
+
+</html>

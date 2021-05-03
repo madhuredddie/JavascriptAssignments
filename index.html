@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Homepage
+        </title>
+    </head>
+
+    <body id= "main">
+        <h1 id ="heading">this is heading </h1>
+        <p id="content">hello world</p>
+        <p id="content1">    hello world 1234     </p>
+        <h2 id= "h2"> this is heading 2</h2>
+        <script>
+            // changing the content of html page
+           // changing content of html
+            document.getElementById("content").innerHTML="Hello Madhu" 
+            document.getElementById("content1").innerText="hello MADHU" 
+
+            //adding the elemnts to the html page
+            let paragraph= document.createElement("p") ;    
+            let plainText=document.createTextNode("New Paragraph");
+            paragraph.appendChild(plainText);
+            document.getElementById("main").appendChild(paragraph);
+            let heading = document.getElementById("heading");
+           // document.getElementById("main").insertBefore(paragraph,heading);
+
+           //removing elemt from the html page
+           let heading2=document.getElementById("h2");
+           document.getElementById("main").removeChild(heading2);
+           
+           //changing styles
+           document.getElementById("content").style.color="blue";
+
+           //changing font size
+           document.getElementById("content1").style.fontSize= "76px";
+
+            </script>
+
+    </body>
+</html>
