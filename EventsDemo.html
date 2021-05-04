@@ -37,10 +37,9 @@
     }
    document.getElementById("textfield2").addEventListener("change",changeFont)
    function changeFont(){
-       let fontsize=document.getElementById("textfield2").value;
-       fontsize=fontsize+"px"
-       console.log(fontsize);
-       document.getElementById("para4").style.changeFont=fontsize;
+       let textValue=document.getElementById("textfield2").value;
+     let textLength =textValue.length
+       document.getElementById("para4").style.fontSize=textLength +"em";
 
    }
 
