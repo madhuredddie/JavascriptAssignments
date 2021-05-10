@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Function</h2>
+
+<p>This example shows Arrow functions</p>
+
+<p id="demo"></p>
+<p id="para1"></p>
+<p id="para2"></p>
+<p id="para3"></p>
+
+<script>
+let hello;
+
+hello = function() {
+  return " this is general function Hello World!";
+}
+let hey  = () => {
+  return " this arrow function with return keyword hi  i am madhu!";
+}
+let name =() => "hi i am madhu with no return keyword";
+let age =(val) => "i am "+val+" years old"
+
+document.getElementById("demo").innerHTML = hello();
+document.getElementById("para1").innerHTML=hey();
+document.getElementById("para2").innerHTML=name();
+document.getElementById("para3").innerHTML=age(22);
+</script>
+
+</body>
+</html>
