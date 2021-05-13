@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair-Remedie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+    <div class="division1">
+        <img id ="blackimg" src="Black_Colour.png"/>
+
+    <ul class="l1st" style="margin-top:-15px;">
+        <li class="list1"><img id="logoimage"  src="loreal-logo.png"></li>
+    </ul>
+    <p id="header">Having Hair trouble </p>
+    <p id="content">Sign in and find out the best hair expert for you</p>
+    <div class="x">
+    <button type="button" style="background-color: white;" id="btn1"><b style="font-weight: 900; font-family:Arial;">Sign in with Google </b></button>
+    <img src="download.png" id="googleicon" />
+    </div>
+    </div>
+    <p id="or" style="font-size: 14px;font-family:Arial;">OR</p>
+ <div class="box">
+    <form >
+        <div class="form-group">
+
+        <label class="labeling" style="font-size: 12px;" for="email">YOUR EMAIL</label>
+        <br>
+        <input class="inputmail" class="form-control" type="text" id="Email" placeholder="  @gmail.com" required>
+       <br>
+       <div>
+           <label class="labeling" style="font-size: 12px;" for="password">PASSWORD</label>
+           <br>
+           <input class="inputpassword" class= "form-control" type="password" id="password" placeholder="asdf" required>
+           <i class="fa fa-eye-slash" style="font-size: 15px;" aria-hidden="true" id="eyeicon"></i>
+           <br>
+       </div>
+       <div>
+           <input class="labeling" type="checkbox" id="checkbox1"> 
+           <label class="labeling" style="font-size: 14px;" for="rememberme">Remember me</label>
+           <label class="forgotpassword" for="forgotpassword">Forgot password</label>
+       </div>
+    </div>
+        <br>
+
+    
+        
+        <button onclick="validateEmailAndPassword()" id="btn3" class="btn btn-primary" ><p style="font-family: Arial;font-weight: 600;text-align: center;">Sign up  </p></button>
+
+        </div>
+    </form>
+
+    <script>
+      function validateEmailAndPassword()
+{
+    let emailFromWeb=document.getElementById("Email").value;
+    let emailChecker=0;
+    let passwordchecker=0;
+    let passwordFromWeb=document.getElementById("password").value;
+    let emailRegex=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let passwordRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
+    if(emailFromWeb.match(emailRegex)){
+        emailChecker=1;
+    }
+    if(passwordFromWeb.match(passwordRegex)){
+        passwordchecker=1;
+    }
+    if(emailChecker==0 && passwordchecker==0)
+    {
+        alert("email and password is invalid");
+    }
+    else if(emailChecker==0 || passwordchecker==0)
+    {
+        alert("email or password is invalid");
+    }
+    else
+    {
+        alert("email and password are valid")
+    }
+}
+
+document.getElementById("eyeicon").addEventListener("click",function(){
+    if(document.getElementById("password").type=="password")
+{
+    this.classList.add("fa-eye");
+    this.classList.remove("fa-eye-slash");
+
+    document.getElementById("password").type="text";
+}
+else{
+    this.classList.remove("fa-eye");
+    this.classList.add("fa-eye-slash");
+    document.getElementById("password").type="password";
+
+}
+})
+    </script>
+        
+
+</body>
+</html>
