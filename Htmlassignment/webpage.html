@@ -24,7 +24,7 @@
     <p id="header">Having Hair trouble </p>
     <p id="content">Sign in and find out the best hair expert for you</p>
     <div class="x">
-    <button type="button" style="background-color: white;" id="btn1"><b style="font-weight: 900; font-family:Arial;">Sign in with Google </b></button>
+    <button type="button" onclick="openWindow()" style="background-color: white;" id="btn1"><b style="font-weight: 900; font-family:Arial;">Sign in with Google </b></button>
     <img src="download.png" id="googleicon" />
     </div>
     </div>
@@ -51,8 +51,6 @@
        </div>
     </div>
         <br>
-
-    
         
         <button onclick="validateEmailAndPassword()" id="btn3" class="btn btn-primary" ><p style="font-family: Arial;font-weight: 600;text-align: center;">Sign up  </p></button>
 
@@ -60,6 +58,11 @@
     </form>
 
     <script>
+function openWindow(){
+    window.open("https://accounts.google.com");
+}
+
+
       function validateEmailAndPassword()
 {
     let emailFromWeb=document.getElementById("Email").value;
@@ -103,6 +106,8 @@ else{
 
 }
 })
+
+
     </script>
         
 
