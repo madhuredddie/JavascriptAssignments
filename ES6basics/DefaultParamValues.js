@@ -2,7 +2,7 @@ function multiplyWithNoDefaultValues(a, b) {
     return a * b
   }
   
-  console.log(multiplyWithNoDefaultValues(5, 4) ); // it returns 10 values
+  console.log(multiplyWithNoDefaultValues(5, 4) ); // it returns 20 values
   console.log(multiplyWithNoDefaultValues(5));     // it returns not a NaN !
 
   function multiplySetDefaultValues(a, b) {
@@ -10,7 +10,7 @@ function multiplyWithNoDefaultValues(a, b) {
     return a * b
   }
   
- console.log(multiplySetDefaultValues(5, 3))  // it returns 10
+ console.log(multiplySetDefaultValues(5, 3))  // it returns 15
   console.log(multiplySetDefaultValues(5));     // it returns 5
 
 function multiplyDefaultParamValues(a, b = 1) {

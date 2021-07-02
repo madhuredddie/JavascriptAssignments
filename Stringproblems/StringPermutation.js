@@ -21,6 +21,6 @@
       return results;
     }
     
-    var permutation = getPermutations('YES')//.filter((el, idx, self) => (self.indexOf(el) === idx));
+    var permutation = getPermutations("abc")
     console.log("Total permutation: "+permutation.length);
     console.log(permutation);

@@ -1,14 +1,18 @@
+// shifting elements with on the array from postion towards to position
 function shiftArray(array,from, to)
 {
     let temp = array[from];
-    if(from>to)
+    if(from==to)
+    {
+        return ;
+    }
+    else if(from>to)
     {
     for(let i= from;i>=to;i--)
     {
         array[i]=array[i-1];
     }
    }
-
    else{
     for(let i= from;i<to;i++)
     {

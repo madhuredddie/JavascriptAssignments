@@ -1,5 +1,4 @@
 let array= ["hello","my","name","is","madhu"]
-let arr=[]
 // function converts to string
 
 function arrayToString(arr)
@@ -11,11 +10,11 @@ console.log(arrayToString(array));
 
 //function converts string to 
 
-let stringone= " hi i am madhu sudhan reddy"
+let stringone= "hi i am madhu sudhan reddy"
   function stringToArray(str)
   {
       let arrayone=str.split(" ");
-      arrayone.shift();
+     // arrayone.shift();
       console.log(arrayone);
   }
 
